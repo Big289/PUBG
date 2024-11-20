@@ -21,3 +21,13 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+function handleFormSubmit(event) {
+    event.preventDefault();  // Empêche le formulaire de se soumettre réellement
+
+    // Afficher la phrase
+    document.getElementById('resetMessage').style.display = 'block';
+    
+    // Vous pouvez également ajouter une logique pour masquer le formulaire après l'envoi
+    document.getElementById('resetForm').reset(); // Réinitialise le formulaire (facultatif)
+}
+
