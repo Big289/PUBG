@@ -134,3 +134,19 @@ img {
 .btn:hover {
     background-color:  rgb(204, 201, 196); /* Vert légèrement plus foncé pour l'effet de survol */
 }
+
+/* Aligner le bouton et le message à côté */
+.form-action {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Aligner à gauche */
+    gap: 10px; /* Espacement entre le bouton et le texte */
+}
+
+.email-sent-msg {
+    font-size: 17px; /* Augmentez cette valeur selon vos besoins */
+    color: white; /* Couleur du texte */
+    margin-top: 10px; /* Espacement par rapport au bouton */
+    text-align: center; /* Centrer le texte */
+    line-height: 1.5; /* Espacement entre les lignes pour plus de lisibilité */
+}
