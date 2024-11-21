@@ -144,7 +144,7 @@ img {
 }
 
 .email-sent-msg {
-    font-size: 17px; /* Augmentez cette valeur selon vos besoins */
+    font-size: 20px; /* Augmentez cette valeur selon vos besoins */
     color: white; /* Couleur du texte */
     margin-top: 10px; /* Espacement par rapport au bouton */
     text-align: center; /* Centrer le texte */

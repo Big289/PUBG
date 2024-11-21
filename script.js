@@ -24,12 +24,14 @@ document.addEventListener('DOMContentLoaded', function () {
 function handleFormSubmit(event) {
     event.preventDefault(); // Empêche la soumission réelle du formulaire
 
-    // Référence au formulaire et au message
-    const emailInput = document.querySelector('.input-box');
-    const submitButton = document.querySelector('.btn');
-    const message = document.getElementById('resetMessage');
+    // Référence au formulaire, au titre, au message et aux autres éléments
+    const formTitle = document.querySelector('h1'); // Le titre "Réinitialiser"
+    const emailInput = document.querySelector('.input-box'); // Le champ email
+    const submitButton = document.querySelector('.btn'); // Le bouton
+    const message = document.getElementById('resetMessage'); // Le message de confirmation
 
-    // Masquer les champs et le bouton
+    // Masquer le titre, le champ email et le bouton
+    formTitle.style.display = 'none';
     emailInput.style.display = 'none';
     submitButton.style.display = 'none';
 
