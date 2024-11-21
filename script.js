@@ -22,12 +22,19 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function handleFormSubmit(event) {
-    event.preventDefault();  // Empêche le formulaire de se soumettre réellement
+    event.preventDefault(); // Empêche la soumission réelle du formulaire
 
-    // Afficher la phrase
-    document.getElementById('resetMessage').style.display = 'block';
-    
-    // Vous pouvez également ajouter une logique pour masquer le formulaire après l'envoi
-    const form = document.getElementById('resetForm');
-    form.style.display = 'none';
+    // Référence au formulaire et au message
+    const emailInput = document.querySelector('.input-box');
+    const submitButton = document.querySelector('.btn');
+    const message = document.getElementById('resetMessage');
+
+    // Masquer les champs et le bouton
+    emailInput.style.display = 'none';
+    submitButton.style.display = 'none';
+
+    // Afficher le message de confirmation
+    message.textContent = "Un lien pour réinitialiser votre mot de passe a été envoyé à votre adresse email.";
+    message.style.display = 'block';
 }
+
