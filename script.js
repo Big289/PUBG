@@ -28,6 +28,6 @@ function handleFormSubmit(event) {
     document.getElementById('resetMessage').style.display = 'block';
     
     // Vous pouvez également ajouter une logique pour masquer le formulaire après l'envoi
-    document.getElementById('resetForm').reset(); // Réinitialise le formulaire (facultatif)
+    const form = document.getElementById('resetForm');
+    form.style.display = 'none';
 }
-
